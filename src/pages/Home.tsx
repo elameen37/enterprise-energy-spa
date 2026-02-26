@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Leaf, Shield, Activity, Zap, Globe } from 'lucide-react';
+import { ArrowRight, Leaf, Shield, Activity, Zap, Globe, Building2, Waves, Factory, Atom, Cpu, Rocket } from 'lucide-react';
 import { NavLink } from 'react-router';
 import { GenericPageSkeleton, useSimulatedLoading } from '../components/ui/Skeleton';
 
@@ -14,6 +14,7 @@ export function Home() {
             <HeroSection />
             <ScrollingTicker />
             <AboutPreview />
+            <PartnershipsSection />
             <StrategicPillars />
             <OperationsHighlight />
         </div>
@@ -194,6 +195,57 @@ function AboutPreview() {
                             </div>
                         ))}
                     </motion.div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function PartnershipsSection() {
+    const partners = [
+        { name: "EuroGrid Alliance", desc: "Grid Infrastructure", icon: <Cpu className="w-6 h-6" /> },
+        { name: "Poseidon Marine", desc: "Offshore Engineering", icon: <Waves className="w-6 h-6" /> },
+        { name: "Helios Renewables", desc: "Solar & Wind", icon: <Atom className="w-6 h-6" /> },
+        { name: "Titan Industries", desc: "Heavy Manufacturing", icon: <Factory className="w-6 h-6" /> },
+        { name: "Meridian Capital", desc: "ESG Investment", icon: <Building2 className="w-6 h-6" /> },
+        { name: "NovaTech Labs", desc: "R&D Innovation", icon: <Rocket className="w-6 h-6" /> },
+    ];
+
+    return (
+        <div className="py-12 sm:py-16 md:py-20 bg-[#050C1A] border-y border-brand-surface">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-10 sm:mb-14"
+                >
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-surface bg-brand-surface/30 text-slate-400 text-xs font-mono mb-4">
+                        Strategic Alliances
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Trusted Partnerships</h2>
+                    <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                        Collaborating with industry leaders across the energy value chain to accelerate the transition.
+                    </p>
+                </motion.div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+                    {partners.map((partner, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.08, duration: 0.5 }}
+                            className="group relative bg-brand-navy/60 backdrop-blur-sm border border-brand-surface rounded-lg p-4 sm:p-5 flex flex-col items-center text-center hover:border-brand-blue/40 hover:bg-brand-surface/30 transition-all duration-300 cursor-pointer"
+                        >
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-brand-surface/50 border border-brand-surface flex items-center justify-center mb-3 text-slate-400 group-hover:text-brand-blue group-hover:border-brand-blue/30 group-hover:scale-110 transition-all duration-300">
+                                {partner.icon}
+                            </div>
+                            <div className="text-sm font-semibold text-white group-hover:text-brand-blue transition-colors">{partner.name}</div>
+                            <div className="text-xs text-slate-500 font-mono mt-1">{partner.desc}</div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </div>
