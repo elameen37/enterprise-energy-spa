@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Leaf, Shield, Activity, Zap } from 'lucide-react';
+import { ArrowRight, Leaf, Shield, Activity, Zap, Globe } from 'lucide-react';
 import { NavLink } from 'react-router';
 import { GenericPageSkeleton, useSimulatedLoading } from '../components/ui/Skeleton';
 
@@ -13,6 +13,7 @@ export function Home() {
         <div className="w-full relative animate-in fade-in duration-700">
             <HeroSection />
             <ScrollingTicker />
+            <AboutPreview />
             <StrategicPillars />
             <OperationsHighlight />
         </div>
@@ -135,6 +136,65 @@ function ScrollingTicker() {
                         <span className="text-slate-500">• LATEST: NEXA ENERGY APPROVES €1.2B OFFSHORE WIND EXPANSION IN NORTH SEA •</span>
                     </div>
                 ))}
+            </div>
+        </div>
+    );
+}
+
+function AboutPreview() {
+    return (
+        <div className="py-12 sm:py-16 md:py-24 bg-brand-navy border-b border-brand-surface">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-mono mb-6">
+                            <Globe className="w-3.5 h-3.5" />
+                            About Nexa Energy
+                        </div>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                            Engineering Europe's Energy
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-neon"> Resilience</span>
+                        </h2>
+                        <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-6 max-w-xl">
+                            Nexa Energy is a premier European energy corporation bridging baseload security with complete decarbonization. We operate across 14 EMEA regions, deploying massive capital into offshore wind, green hydrogen, and carbon capture technology.
+                        </p>
+                        <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
+                            With an A- credit rating and €500M+ annual R&D commitment, we are not just powering grids — we are engineering the continent's sustainable future while delivering consistent shareholder returns.
+                        </p>
+                        <NavLink
+                            to="/about"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded bg-brand-surface hover:bg-brand-surface/80 border border-brand-surface/50 text-white font-medium transition-all hover:border-brand-blue/50 group"
+                        >
+                            Learn More About Us
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </NavLink>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="grid grid-cols-2 gap-4 sm:gap-6"
+                    >
+                        {[
+                            { value: "14", label: "EMEA Regions", sub: "Operational footprint" },
+                            { value: "€24.8B", label: "Market Cap", sub: "Frankfurt listed" },
+                            { value: "8.5GW", label: "Renewables Pipeline", sub: "By 2030" },
+                            { value: "€500M+", label: "Annual R&D", sub: "Innovation spend" },
+                        ].map((stat, i) => (
+                            <div key={i} className="bg-[#050C1A] border border-brand-surface rounded-lg p-4 sm:p-6 hover:border-brand-blue/30 transition-colors">
+                                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white font-mono mb-1">{stat.value}</div>
+                                <div className="text-sm text-brand-blue font-medium mb-0.5">{stat.label}</div>
+                                <div className="text-xs text-slate-500 font-mono">{stat.sub}</div>
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
             </div>
         </div>
     );
