@@ -9,7 +9,7 @@ export function Contact() {
 
     return (
         <div className="w-full min-h-screen bg-brand-navy animate-in fade-in duration-700">
-            <div className="relative pt-32 pb-24 border-b border-brand-surface overflow-hidden">
+            <div className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 border-b border-brand-surface overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-brand-navy/80 z-10" />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent z-10" />
@@ -21,21 +21,21 @@ export function Contact() {
                 </div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Contact Us</h1>
-                        <p className="text-xl text-slate-300 max-w-2xl font-light">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Contact Us</h1>
+                        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl font-light">
                             Engage with our corporate affairs, investor relations, or media teams. We maintain strict SLAs for all regulatory and strategic inquiries.
                         </p>
                     </motion.div>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
 
                     <div>
                         <h2 className="text-2xl font-semibold text-white mb-8">Direct Inquiries</h2>
                         <form className="space-y-6">
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                 <div>
                                     <label className="block text-sm font-medium text-slate-400 mb-2">First Name</label>
                                     <input type="text" className="w-full bg-[#050C1A] border border-brand-surface rounded p-3 text-white focus:outline-none focus:border-brand-blue transition-colors" placeholder="Jane" />

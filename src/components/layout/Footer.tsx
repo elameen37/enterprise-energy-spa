@@ -8,14 +8,14 @@ export function Footer() {
     };
 
     return (
-        <footer className="bg-[#050C1A] border-t border-brand-surface pt-20 pb-10 relative overflow-hidden">
+        <footer className="bg-[#050C1A] border-t border-brand-surface pt-12 sm:pt-16 md:pt-20 pb-10 relative overflow-hidden">
             {/* Ambient Background Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[radial-gradient(ellipse_at_top,_var(--color-brand-blue)_0%,_transparent_50%)] opacity-5 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 sm:gap-10 md:gap-12 mb-12 sm:mb-16">
 
-                    <div className="md:col-span-4">
+                    <div className="sm:col-span-2 md:col-span-4">
                         <div className="flex items-center gap-2 mb-6">
                             <Globe className="w-6 h-6 text-brand-blue" />
                             <span className="text-xl font-bold tracking-tight text-white">
@@ -35,7 +35,7 @@ export function Footer() {
                         </div>
                     </div>
 
-                    <div className="md:col-span-2">
+                    <div className="sm:col-span-1 md:col-span-2">
                         <h3 className="text-white font-semibold mb-6 text-sm tracking-wider uppercase">Enterprise</h3>
                         <ul className="space-y-4">
                             <li><NavLink to="/about" className="text-sm text-slate-400 hover:text-brand-blue transition-colors">About Nexa</NavLink></li>
@@ -45,7 +45,7 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    <div className="md:col-span-3">
+                    <div className="sm:col-span-1 md:col-span-3">
                         <h3 className="text-white font-semibold mb-6 text-sm tracking-wider uppercase">Corporate Affairs</h3>
                         <ul className="space-y-4">
                             <li>
@@ -59,7 +59,7 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    <div className="md:col-span-3">
+                    <div className="sm:col-span-2 md:col-span-3">
                         <h3 className="text-white font-semibold mb-6 text-sm tracking-wider uppercase">Investor Relations</h3>
                         <ul className="space-y-4">
                             <li><NavLink to="/investors" className="text-sm text-slate-400 hover:text-brand-blue transition-colors">Q3 2026 Earnings</NavLink></li>
@@ -85,7 +85,7 @@ export function Footer() {
             {/* Back to Top */}
             <button
                 onClick={scrollToTop}
-                className="absolute right-8 bottom-8 w-12 h-12 bg-brand-surface/50 hover:bg-brand-blue hover:text-brand-navy text-slate-400 rounded-full border border-brand-surface flex items-center justify-center transition-all group backdrop-blur-sm shadow-lg z-20"
+                className="absolute right-4 sm:right-8 bottom-4 sm:bottom-8 w-10 h-10 sm:w-12 sm:h-12 bg-brand-surface/50 hover:bg-brand-blue hover:text-brand-navy text-slate-400 rounded-full border border-brand-surface flex items-center justify-center transition-all group backdrop-blur-sm shadow-lg z-20"
                 aria-label="Scroll to top"
             >
                 <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />

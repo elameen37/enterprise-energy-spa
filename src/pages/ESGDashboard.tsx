@@ -36,13 +36,13 @@ function DashboardHeader() {
                             <span className="w-2 h-2 rounded-full bg-brand-neon animate-pulse" />
                             AUDIT TRAIL ACTIVE • LAST SYNC: JUST NOW
                         </div>
-                        <h1 className="text-4xl font-bold text-white mb-2">Live ESG Reporting Engine</h1>
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Live ESG Reporting Engine</h1>
                         <p className="text-slate-400 max-w-2xl">
                             Fully transparent, real-time telemetry from EMEA operations.
                             Data ingested via IoT layer, strictly adhering to EU Corporate Sustainability Reporting Directive (CSRD) frameworks.
                         </p>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-3">
                         <button className="px-4 py-2 bg-brand-surface hover:bg-brand-surface/80 border border-brand-surface transition-colors rounded text-sm text-white flex items-center gap-2">
                             <Filter className="w-4 h-4" /> Edit Parameters
                         </button>
@@ -58,8 +58,8 @@ function DashboardHeader() {
 
 function EmissionsChart() {
     return (
-        <div className="bg-brand-navy border border-brand-surface rounded-lg p-6 h-full flex flex-col">
-            <div className="flex justify-between items-center mb-8">
+        <div className="bg-brand-navy border border-brand-surface rounded-lg p-4 sm:p-6 h-full flex flex-col">
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 sm:gap-0 mb-6 sm:mb-8">
                 <div>
                     <h3 className="text-lg font-semibold text-white">Carbon Intensity Snapshot</h3>
                     <p className="text-xs text-slate-500 font-mono">Scope 1 & 2 • kg CO2e / boe</p>
@@ -71,7 +71,7 @@ function EmissionsChart() {
                 </select>
             </div>
 
-            <div className="flex-grow flex items-end justify-between gap-2 md:gap-4 mt-auto border-b border-brand-surface pb-2">
+            <div className="flex-grow flex items-end justify-between gap-1 sm:gap-2 md:gap-4 mt-auto border-b border-brand-surface pb-2 min-h-[150px] sm:min-h-[200px]">
                 {/* Fake chart data representing reduction over months */}
                 {[85, 82, 79, 81, 75, 72, 68, 65, 62, 58, 55, 50].map((val, i) => (
                     <div key={i} className="flex flex-col items-center w-full group">
@@ -91,7 +91,7 @@ function EmissionsChart() {
                     </div>
                 ))}
             </div>
-            <div className="flex justify-between mt-4 text-xs font-mono text-slate-400">
+            <div className="flex flex-col sm:flex-row justify-between mt-4 gap-1 text-xs font-mono text-slate-400">
                 <span>Target: 45kg CO2e/boe by 2030</span>
                 <span className="text-brand-neon">Current: 50.2kg</span>
             </div>
@@ -166,40 +166,40 @@ function AssetLevelGrid() {
                 <table className="w-full text-left border-collapse">
                     <thead>
                         <tr className="bg-[#050C1A] border-b border-brand-surface text-xs font-mono text-slate-400 uppercase tracking-wider">
-                            <th className="px-6 py-4 font-medium">Asset ID</th>
-                            <th className="px-6 py-4 font-medium">Segment</th>
-                            <th className="px-6 py-4 font-medium">Power Source</th>
-                            <th className="px-6 py-4 font-medium">Live Status</th>
-                            <th className="px-6 py-4 font-medium">Actions</th>
+                            <th className="px-3 sm:px-6 py-3 sm:py-4 font-medium">Asset ID</th>
+                            <th className="px-3 sm:px-6 py-3 sm:py-4 font-medium">Segment</th>
+                            <th className="px-3 sm:px-6 py-3 sm:py-4 font-medium hidden sm:table-cell">Power Source</th>
+                            <th className="px-3 sm:px-6 py-3 sm:py-4 font-medium">Live Status</th>
+                            <th className="px-3 sm:px-6 py-3 sm:py-4 font-medium hidden sm:table-cell">Actions</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-brand-surface">
                         {assets.map((asset, i) => (
                             <tr key={i} className="hover:bg-brand-surface/20 transition-colors">
-                                <td className="px-6 py-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded bg-brand-surface flex items-center justify-center text-slate-300">
+                                <td className="px-3 sm:px-6 py-3 sm:py-4">
+                                    <div className="flex items-center gap-2 sm:gap-3">
+                                        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-brand-surface flex items-center justify-center text-slate-300 flex-shrink-0">
                                             {asset.icon}
                                         </div>
-                                        <div>
-                                            <div className="text-sm font-medium text-white">{asset.name}</div>
-                                            <div className="text-xs text-slate-500 font-mono">ID: NX-{1042 + i}</div>
+                                        <div className="min-w-0">
+                                            <div className="text-xs sm:text-sm font-medium text-white truncate">{asset.name}</div>
+                                            <div className="text-[10px] sm:text-xs text-slate-500 font-mono">ID: NX-{1042 + i}</div>
                                         </div>
                                     </div>
                                 </td>
-                                <td className="px-6 py-4">
+                                <td className="px-3 sm:px-6 py-3 sm:py-4">
                                     <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-brand-surface text-slate-300">
                                         {asset.type}
                                     </span>
                                 </td>
-                                <td className="px-6 py-4 text-sm text-slate-300">{asset.power}</td>
-                                <td className="px-6 py-4">
-                                    <div className="flex items-center gap-2 text-sm text-slate-300">
-                                        <span className={`w-2 h-2 rounded-full ${asset.status === 'Nominal' ? 'bg-brand-neon' : 'bg-amber-500 animate-pulse'}`} />
+                                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm text-slate-300 hidden sm:table-cell">{asset.power}</td>
+                                <td className="px-3 sm:px-6 py-3 sm:py-4">
+                                    <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
+                                        <span className={`w-2 h-2 rounded-full flex-shrink-0 ${asset.status === 'Nominal' ? 'bg-brand-neon' : 'bg-amber-500 animate-pulse'}`} />
                                         {asset.status}
                                     </div>
                                 </td>
-                                <td className="px-6 py-4">
+                                <td className="px-3 sm:px-6 py-3 sm:py-4 hidden sm:table-cell">
                                     <button className="text-xs font-medium text-brand-blue hover:text-white transition-colors">
                                         View Data Logs
                                     </button>

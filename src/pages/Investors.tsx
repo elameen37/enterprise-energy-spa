@@ -9,7 +9,7 @@ export function Investors() {
 
     return (
         <div className="w-full min-h-screen bg-brand-navy animate-in fade-in duration-700">
-            <div className="pt-32 pb-24 bg-[#050C1A] border-b border-brand-surface relative overflow-hidden">
+            <div className="pt-24 sm:pt-32 pb-16 sm:pb-24 bg-[#050C1A] border-b border-brand-surface relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-[#050C1A] z-10" />
                     <div className="absolute inset-0 bg-brand-navy/70 z-20" />
@@ -22,7 +22,7 @@ export function Investors() {
                 <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-[100px] z-20" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
                     <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Investor Relations</h1>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Investor Relations</h1>
                         <p className="text-lg text-slate-400 max-w-2xl">
                             Transparent, real-time access to financial performance, capital allocation strategy, and corporate filings.
                         </p>
@@ -31,7 +31,7 @@ export function Investors() {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
                     <StatCard title="Market Cap" value="€24.8B" trend="+2.4%" />
                     <StatCard title="Dividend Yield" value="6.2%" trend="Stable" />
                     <StatCard title="YTD Return" value="14.5%" trend="+14.5%" />
@@ -101,7 +101,7 @@ function StatCard({ title, value, trend }: any) {
     return (
         <div className="bg-[#050C1A] border border-brand-surface rounded-lg p-6 hover:border-brand-blue/30 transition-colors">
             <div className="text-sm text-slate-400 mb-2">{title}</div>
-            <div className="text-3xl font-bold text-white mb-2 font-mono">{value}</div>
+            <div className="text-2xl sm:text-3xl font-bold text-white mb-2 font-mono">{value}</div>
             <div className={`text-sm font-mono ${isPositive ? 'text-brand-neon' : 'text-slate-400'}`}>
                 {trend}
             </div>

@@ -10,7 +10,7 @@ export function Operations() {
 
     return (
         <div className="w-full relative min-h-screen bg-brand-navy animate-in fade-in duration-700">
-            <div className="relative pt-32 pb-24 overflow-hidden border-b border-brand-surface">
+            <div className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 overflow-hidden border-b border-brand-surface">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-[#050C1A] z-10" />
                     <div className="absolute inset-0 bg-brand-navy/80 z-20" />
@@ -26,15 +26,15 @@ export function Operations() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-mono mb-4 uppercase tracking-wider">
                             Asset Strategy Map
                         </div>
-                        <h1 className="text-5xl font-bold text-white mb-6">Operations & Infrastucture</h1>
-                        <p className="text-xl text-slate-400 max-w-3xl font-light">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Operations & Infrastructure</h1>
+                        <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl font-light">
                             Nexa Energy manages a highly synchronized portfolio consisting of low-capex legacy hydrocarbon assets and high-growth renewable energy hubs. All optimized via centralized automated command.
                         </p>
                     </motion.div>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     <OperationCard
@@ -73,7 +73,7 @@ export function Operations() {
                 </div>
 
                 <div className="mt-20">
-                    <div className="bg-[#050C1A] border border-brand-surface rounded-lg p-8 relative overflow-hidden group">
+                    <div className="bg-[#050C1A] border border-brand-surface rounded-lg p-5 sm:p-8 relative overflow-hidden group">
                         <div className="absolute right-0 top-0 w-64 h-64 bg-brand-neon/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
                         <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
                             <div className="max-w-xl">
@@ -81,7 +81,7 @@ export function Operations() {
                                 <p className="text-slate-400 mb-6">
                                     Every asset is mapped into our Digital Twin environment, allowing predictive maintenance via machine learning and instantaneous emergency shutdown commands across perfectly secure air-gapped networks.
                                 </p>
-                                <div className="flex items-center gap-6">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
                                     <div className="flex items-center gap-2 text-sm text-brand-neon font-mono">
                                         <ShieldCheck className="w-4 h-4" /> ISO 27001 Certified
                                     </div>

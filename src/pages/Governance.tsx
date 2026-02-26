@@ -10,10 +10,10 @@ export function Governance() {
 
     return (
         <div className="w-full min-h-screen bg-brand-navy animate-in fade-in duration-700">
-            <div className="pt-24 pb-16 relative">
+            <div className="pt-24 sm:pt-28 pb-12 sm:pb-16 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Corporate Governance</h1>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Corporate Governance</h1>
                         <p className="text-lg text-slate-400 max-w-3xl">
                             Integrity, accountability, and stringent risk management govern every decision at Nexa Energy.
                             Our board structure ensures strict compliance with the highest European regulatory standards.
@@ -67,7 +67,7 @@ export function Governance() {
                             <PolicyCard icon={<Users />} title="Human Rights Policy" />
                         </div>
 
-                        <div className="mt-12 bg-brand-surface/30 border border-brand-surface rounded p-8">
+                        <div className="mt-12 bg-brand-surface/30 border border-brand-surface rounded p-5 sm:p-8">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <ShieldAlert className="text-amber-500" /> Crisis Command Protocol
                             </h3>

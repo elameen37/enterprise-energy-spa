@@ -21,7 +21,7 @@ export function Home() {
 
 function HeroSection() {
     return (
-        <div className="relative h-[90vh] bg-brand-navy overflow-hidden flex items-center">
+        <div className="relative min-h-[80vh] md:min-h-[90vh] bg-brand-navy overflow-hidden flex items-center py-20 md:py-0">
             {/* Abstract Background - WebGL/Video overlay with image */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10" />
@@ -48,14 +48,14 @@ function HeroSection() {
                         LIVE: Q3 2026 EARNINGS CONFERENCE CALL IN 14:02:45
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                         Powering the European <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-neon">
                             Energy Transition
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-light">
+                    <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 sm:mb-10 max-w-2xl font-light">
                         Engineered for resilience. Driven by operational excellence.
                         We provide absolute transparency for investors while securing
                         the continent's sustainable future.
@@ -149,10 +149,10 @@ function StrategicPillars() {
     ];
 
     return (
-        <div className="py-24 bg-brand-navy">
+        <div className="py-12 sm:py-16 md:py-24 bg-brand-navy">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-16">
-                    <h2 className="text-3xl font-bold text-white mb-4">Strategic Framework</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Strategic Framework</h2>
                     <p className="text-slate-400 max-w-2xl text-lg">
                         Our multi-decade strategy balances the immediate need for European energy security with the imperative of decarbonization.
                     </p>
@@ -185,13 +185,13 @@ function StrategicPillars() {
 
 function OperationsHighlight() {
     return (
-        <div className="py-24 bg-[#050C1A] border-y border-brand-surface">
+        <div className="py-12 sm:py-16 md:py-24 bg-[#050C1A] border-y border-brand-surface">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
 
                     <div>
                         <div className="text-brand-blue text-sm font-semibold tracking-wider uppercase mb-3">Asset Portfolio</div>
-                        <h2 className="text-4xl font-bold text-white mb-6">Optimized infrastructure across the EMEA region.</h2>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">Optimized infrastructure across the EMEA region.</h2>
                         <p className="text-slate-300 text-lg mb-8 leading-relaxed font-light">
                             Nexa Energy operates a highly integrated portfolio. From low-carbon deepwater extraction in the North Atlantic to state-of-the-art refining complexes in Central Europe, every asset is continuously optimized via our centralized digital twin environment.
                         </p>

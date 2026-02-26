@@ -10,7 +10,7 @@ export function Login() {
     if (isLoading) return <GenericPageSkeleton />;
 
     return (
-        <div className="w-full min-h-screen bg-brand-navy flex items-center justify-center relative overflow-hidden animate-in fade-in duration-500">
+        <div className="w-full min-h-screen bg-brand-navy flex items-center justify-center relative overflow-hidden animate-in fade-in duration-500 px-4 sm:px-6">
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-brand-navy/90 z-10" />
                 <img
@@ -24,7 +24,7 @@ export function Login() {
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="relative z-20 w-full max-w-md bg-[#050C1A]/80 backdrop-blur-xl border border-brand-surface rounded-2xl p-8 shadow-2xl"
+                className="relative z-20 w-full max-w-md bg-[#050C1A]/80 backdrop-blur-xl border border-brand-surface rounded-2xl p-6 sm:p-8 shadow-2xl mx-auto"
             >
                 <div className="flex justify-center mb-8">
                     <NavLink to="/" className="flex items-center gap-2">

@@ -16,7 +16,7 @@ export function Career() {
 
     return (
         <div className="w-full min-h-screen bg-brand-navy animate-in fade-in duration-700">
-            <div className="relative pt-32 pb-24 border-b border-brand-surface overflow-hidden">
+            <div className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 border-b border-brand-surface overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-brand-navy/80 z-10" />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent z-10" />
@@ -31,15 +31,15 @@ export function Career() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-mono mb-4 uppercase tracking-wider">
                             Careers at Nexa
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Engineer the Future</h1>
-                        <p className="text-xl text-slate-300 max-w-2xl font-light">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Engineer the Future</h1>
+                        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl font-light">
                             Join the minds solving Europe's most complex energy challenges. Expect rigorous standards, continuous innovation, and a transformative career trajectory.
                         </p>
                     </motion.div>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
                     <div className="lg:col-span-1 space-y-8">
