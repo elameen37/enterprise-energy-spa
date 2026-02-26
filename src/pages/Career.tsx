@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Briefcase, GraduationCap, Heart, MapPin } from 'lucide-react';
 import { GenericPageSkeleton, useSimulatedLoading } from '../components/ui/Skeleton';

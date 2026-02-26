@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Download, Filter, Droplet, Wind, Zap, AlertTriangle, CheckCircle2 } from 'lucide-react';
 import { GenericPageSkeleton, useSimulatedLoading } from '../components/ui/Skeleton';

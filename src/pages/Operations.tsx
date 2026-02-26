@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Factory, Droplets, Zap, ArrowRight, ShieldCheck, Target } from 'lucide-react';
 import { GenericPageSkeleton, useSimulatedLoading } from '../components/ui/Skeleton';

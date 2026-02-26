@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { NavLink } from 'react-router';
 import { Globe, ArrowUpRight, ArrowUp } from 'lucide-react';
 

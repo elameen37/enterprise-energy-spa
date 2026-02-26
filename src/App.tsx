@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Routes, Route } from 'react-router';
 import { RootLayout } from './components/layout/RootLayout';
 import { Home } from './pages/Home';

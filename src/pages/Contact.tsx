@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Building } from 'lucide-react';
+import { Phone, Mail, Building } from 'lucide-react';
 import { GenericPageSkeleton, useSimulatedLoading } from '../components/ui/Skeleton';
 
 export function Contact() {

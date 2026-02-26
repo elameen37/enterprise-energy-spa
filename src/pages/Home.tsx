@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Leaf, Shield, Activity, Zap } from 'lucide-react';
 import { NavLink } from 'react-router';

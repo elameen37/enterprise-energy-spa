@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, TrendingUp, PieChart, FileText, Download } from 'lucide-react';
+import { TrendingUp, FileText, Download } from 'lucide-react';
 import { GenericPageSkeleton, useSimulatedLoading } from '../components/ui/Skeleton';
 
 export function Investors() {
