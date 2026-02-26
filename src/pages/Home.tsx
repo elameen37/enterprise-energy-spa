@@ -70,10 +70,26 @@ function HeroSection() {
                             Investor Relations Room
                         </button>
                     </div>
+
+                    {/* Inline Metrics Card — visible on mobile & tablet only */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        className="lg:hidden mt-8 backdrop-blur-xl bg-brand-surface/60 border border-brand-surface/80 rounded-lg p-4 sm:p-5"
+                    >
+                        <h3 className="text-xs font-mono text-slate-400 mb-3 uppercase tracking-wider">Real-Time Core Metrics</h3>
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                            <MetricRow label="EBITDA Margin" value="34.2%" trend="+1.2%" />
+                            <MetricRow label="ROCE" value="18.5%" trend="+0.8%" />
+                            <MetricRow label="Green CAPEX" value="€850M" trend="+15%" />
+                            <MetricRow label="Scope 1 Red." value="-22%" trend="On Target" positive />
+                        </div>
+                    </motion.div>
                 </motion.div>
             </div>
 
-            {/* Floating Metrics Card */}
+            {/* Floating Metrics Card — desktop only */}
             <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
